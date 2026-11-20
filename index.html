@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>دعوة عقد قران بشّار و زينب</title>
+ <meta name="description" content="بشار ⁠♡ زينب">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:url" content="https://touch-invetation.github.io/Bashar-Zainab/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="عقد قران" />
+    <meta property="og:image" content="https://touch-invetation.github.io/Bashar-Zainab/love-letter.png" />
+    <meta property="og:image:secure_url" content="https://touch-invetation.github.io/Bashar-Zainab/love-letter.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="512" />
+    <meta property="og:image:height" content="512" />
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary" />
+    <meta property="twitter:domain" content="touch-invetation.github.io" />
+    <meta property="twitter:url" content="https://touch-invetation.github.io/Bashar-Zainab/" />
+    <meta name="twitter:title" content="عقد قران" />
+    <meta name="twitter:image" content="https://touch-invetation.github.io/Bashar-Zainab/love-letter.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Great+Vibes&family=Cormorant+Garamond:ital,wght@1,500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#f3e9de;
+    --cream-deep:#e9dccd;
+    --gold:#7e5806;
+    --gold-dark:#7e5806;
+    --gold-light:#c9a463;
+    --ink:#7e5806;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{min-height:100%}
+  body{
+    font-family:"Amiri","Amiri",serif;
+    color:var(--ink);
+    background:#f0e2d4;
+    min-height:100vh;
+    overflow-x:hidden;
+  }
+
+  /* ---------- Intro / envelope ---------- */
+  .intro{
+    position:fixed;inset:0;z-index:20;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;
+    background:#f0e6df;
+    transition:opacity 1.1s ease, visibility 1.1s ease;
+    overflow:hidden;
+  }
+  .intro.gone{opacity:0;visibility:hidden}
+  .env{
+    position:relative;
+    width:min(88vw, 440px, calc(84vh * 0.6667));
+    aspect-ratio:1024/1536;
+    margin-top:-14vh;
+    perspective:1600px;
+  }
+  .env .layer{position:absolute;inset:0;background:url("env-open.jpg") center/100% 100% no-repeat}
+  .env .back{clip-path:inset(42.1% 0 0 0);z-index:0}
+  .env .front{clip-path:polygon(0 41.9%, 2.4% 41.9%, 9.8% 44.5%, 14.6% 47.2%, 19.5% 50.6%, 24.4% 54.1%, 29.3% 57.0%, 34.2% 59.2%, 39.1% 61.4%, 43.9% 63.5%, 50.0% 65.4%, 56.1% 63.5%, 60.9% 61.4%, 65.8% 59.2%, 70.7% 57.0%, 75.6% 54.1%, 80.5% 50.6%, 85.4% 47.2%, 90.2% 44.5%, 97.6% 41.9%, 100% 41.9%, 100% 100%, 0 100%);z-index:3}
+  .feather{
+    -webkit-mask-image:linear-gradient(to right,transparent,#000 4%,#000 96%,transparent),linear-gradient(to bottom,transparent,#000 4%,#000 96%,transparent);
+    -webkit-mask-composite:source-in;
+    mask-image:linear-gradient(to right,transparent,#000 4%,#000 96%,transparent),linear-gradient(to bottom,transparent,#000 4%,#000 96%,transparent);
+    mask-composite:intersect;
+  }
+
+  /* the flap: hinged on the top edge of the envelope body */
+  .flap{
+    position:absolute;left:0;right:0;top:0;height:42.3%;
+    transform-origin:50% 100%;
+    transform-style:preserve-3d;
+    transform:rotateX(180deg);
+    z-index:4;
+    transition:transform 1.5s cubic-bezier(.55,0,.25,1);
+  }
+  .flap .face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden}
+  .flap .inner{
+    position:absolute;inset:0;
+    background:url("env-open.jpg") top center/100% 236.407% no-repeat;
+    clip-path:polygon(2.1% 100.00%, 2.2% 96.22%, 2.5% 92.43%, 3.1% 88.42%, 4.2% 84.63%, 5.5% 80.85%, 7.5% 77.07%, 10.3% 73.05%, 14.1% 69.27%, 15.4% 65.48%, 17.4% 61.47%, 19.8% 57.68%, 22.7% 53.90%, 25.9% 50.12%, 28.8% 46.10%, 31.3% 42.32%, 34.1% 38.53%, 36.4% 34.52%, 38.8% 30.73%, 40.8% 26.95%, 43.0% 23.17%, 44.9% 19.86%, 46.9% 17.73%, 50.0% 16.55%, 53.1% 17.73%, 55.1% 19.86%, 57.0% 23.17%, 59.2% 26.95%, 61.2% 30.73%, 63.6% 34.52%, 65.9% 38.53%, 68.7% 42.32%, 71.2% 46.10%, 74.1% 50.12%, 77.3% 53.90%, 80.2% 57.68%, 82.6% 61.47%, 84.6% 65.48%, 85.9% 69.27%, 89.7% 73.05%, 92.5% 77.07%, 94.5% 80.85%, 95.8% 84.63%, 96.9% 88.42%, 97.5% 92.43%, 97.8% 96.22%, 97.9% 100.00%);
+  }
+  /* outside of the flap (seen when closed) */
+  .flap .outside{transform:rotateX(180deg);filter:drop-shadow(0 6px 6px rgba(120,80,40,.22))}
+  .flap .outside .inner{transform:scaleY(-1)}
+  .flap .outside .inner::after{
+    content:"";position:absolute;inset:0;
+    background:linear-gradient(0deg, rgba(255,250,244,.0) 0%, rgba(160,120,80,.06) 100%);
+  }
+  .intro.opening .flap{transform:rotateX(0deg)}
+  .intro.flap-up .flap{z-index:1}
+
+  .seal{
+    position:absolute;z-index:6;
+    left:50%;top:79%;width:15.5%;aspect-ratio:1;
+    transform:translate(-50%,-50%);
+    border:none;padding:0;cursor:pointer;border-radius:50%;
+    background:url("seal.png") center/contain no-repeat;
+    filter:drop-shadow(0 4px 5px rgba(110,70,20,.3));
+    -webkit-tap-highlight-color:transparent;
+    transition:transform .35s ease;
+  }
+  .seal:hover{transform:translate(-50%,-50%) scale(1.04)}
+  .seal::before,.seal::after{
+    content:"";position:absolute;inset:-6%;border-radius:50%;
+    border:1.5px solid rgba(201,160,85,.8);
+    animation:ring 2.4s ease-out infinite;
+  }
+  .seal::after{animation-delay:1.2s}
+  @keyframes ring{0%{transform:scale(.95);opacity:.9}100%{transform:scale(1.8);opacity:0}}
+  .intro.opening .seal::before,.intro.opening .seal::after{animation:none;opacity:0}
+  .intro.opening .seal{transform:translate(-50%,-50%)}
+  .seal:focus-visible{outline:2px solid #b8904c;outline-offset:6px}
+
+  .pocket{position:absolute;inset:0;z-index:2;clip-path:inset(-200vh -100vw 17% -100vw)}
+  .mini{
+    position:absolute;left:12%;width:76%;top:44.8%;
+    aspect-ratio:1.25;
+    background:linear-gradient(180deg,#f6eee6 0%,#f1e7dd 100%);
+    border-radius:3px;
+    box-shadow:0 -4px 14px -6px rgba(110,80,40,.28), inset 0 0 0 1px rgba(255,255,255,.6);
+    display:flex;flex-direction:column;align-items:center;justify-content:flex-start;
+    padding-top:6cqw;
+    container-type:inline-size;
+    transition:transform 1.6s cubic-bezier(.45,0,.2,1);
+  }
+  .mini .t{font-family:"Amiri",serif;font-size:5.5cqw;color:var(--gold-dark);line-height:1.4}
+  .mini .n{display:flex;align-items:center;justify-content:center;gap:3cqw;margin-top:2cqw}
+  .mini .n img{height:22cqw;width:auto;display:block}
+  .mini .n .w{font-family:"Amiri",serif;font-weight:700;font-size:9cqw}
+  .intro.rise .mini{transform:translateY(-46%)}
+
+  .intro p{
+    font-family:"Amiri",serif;font-size:clamp(16px,4.2vw,20px);color:var(--gold-dark);
+    opacity:.85;transition:opacity .5s ease;margin-top:-10vh;
+  }
+  .intro.opening p{opacity:0}
+
+  /* ---------- Card ---------- */
+  main{
+    position:relative;z-index:1;
+    display:flex;flex-direction:column;align-items:center;
+    padding:0 0 44px;
+    gap:48px;
+  }
+  .card{
+    position:relative;
+    width:min(100%, 540px);
+    aspect-ratio:941/1672;
+    container-type:inline-size;
+    background:url("frame.jpg") center/cover no-repeat;
+    -webkit-mask-image:linear-gradient(to right,transparent,#000 3%,#000 97%,transparent),linear-gradient(to bottom,transparent,#000 2%,#000 98%,transparent);
+    -webkit-mask-composite:source-in;
+    mask-image:linear-gradient(to right,transparent,#000 3%,#000 97%,transparent),linear-gradient(to bottom,transparent,#000 2%,#000 98%,transparent);
+    mask-composite:intersect;
+    opacity:0;transform:translateY(20px);
+    transition:opacity 1.2s ease, transform 1.2s cubic-bezier(.2,.8,.2,1);
+  }
+  body.open .card{opacity:1;transform:none}
+
+  .content{
+    position:absolute;
+    top:14%;bottom:20%;left:17%;right:17%;
+    display:flex;flex-direction:column;align-items:center;justify-content:space-evenly;
+    text-align:center;
+  }
+  .content > *{flex:none}
+  /* line-by-line text reveal */
+  .rv{opacity:0;transform:translateY(12px);filter:blur(5px);transition:opacity 1.1s ease, transform 1.1s cubic-bezier(.2,.8,.2,1), filter 1.1s ease}
+  .shown .rv{opacity:1;transform:none;filter:blur(0)}
+
+  .gold{
+    background:linear-gradient(180deg,#b48a48 0%,#8c6428 55%,#a67d3c 100%);
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .basmala{font-family:"Amiri",serif;font-size:4cqw;color:var(--gold-dark);line-height:1.5}
+  .ayah{font-family:"Amiri",serif;font-size:3.4cqw;line-height:1.85;color:var(--gold-dark)}
+  .ayah .ref{display:block;font-size:2.6cqw;line-height:1.5;opacity:.85;margin-top:.3cqw}
+
+  .divider{width:62%;height:2.4cqw;display:block;color:var(--gold-light)}
+
+  .hosts{display:flex;flex-direction:column;align-items:center;gap:.4cqw}
+  .lead{font-size:4.1cqw;line-height:1.15;color:var(--gold-dark)}
+  .host{font-family:"Amiri",serif;font-weight:700;font-size:5.3cqw;line-height:1.3}
+  .host-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:4cqw;width:calc(100% + 12cqw);margin:2.4cqw -6cqw 2.6cqw}
+  .host-col{display:flex;flex-direction:column;align-items:center;justify-content:flex-end}
+  .host-col .title{font-size:3.6cqw;color:var(--gold);line-height:1.3}
+  .host-col .host{font-size:4.2cqw;line-height:1.3;white-space:nowrap}
+  .host-sep{width:1px;background:linear-gradient(transparent,rgba(166,125,60,.55),transparent)}
+  .and{font-family:"Amiri",serif;font-weight:700;font-size:3.8cqw;line-height:.8}
+  .occasion{font-family:"Amiri",serif;font-weight:700;font-size:4.8cqw;line-height:1.25;margin-top:.8cqw}
+
+  .couple{
+    display:flex;align-items:center;justify-content:center;gap:2.2cqw;
+    filter:drop-shadow(0 1px 0 rgba(255,255,255,.7));
+  }
+  .couple img{height:14.5cqw;width:auto;display:block}
+  .couple .w{font-family:"Amiri",serif;font-weight:700;font-size:5.8cqw;line-height:1}
+
+  .details{list-style:none;display:flex;flex-direction:column;gap:.9cqw;width:100%}
+  .details li{display:flex;align-items:flex-start;justify-content:center;gap:1.6cqw;font-size:3.5cqw;line-height:1.2;font-weight:600}
+  .details svg{width:3.4cqw;height:3.4cqw;flex:none;margin-top:.4cqw;color:var(--gold)}
+  .details .sub{display:block;font-size:2.9cqw;font-weight:500;opacity:.9}
+
+  .closing{font-family:"Amiri",serif;font-weight:700;font-size:4.8cqw;line-height:1.3}
+
+  /* reveal parts 2 & 3 as they scroll into view */
+  body.open .card2{opacity:0;transform:translateY(24px);transition:opacity 1s ease, transform 1s cubic-bezier(.2,.8,.2,1)}
+  body.open .card2.in{opacity:1;transform:none}
+  /* one dark ink for all text */
+  .gold{background:none!important;-webkit-background-clip:border-box!important;background-clip:border-box!important;color:#7e5806!important}
+  .btn.ghost{color:#7e5806}
+  /* first part: one ink colour for all text, matching the names */
+  .card:not(.card2) .content{--ink1:#7e5806}
+  .card:not(.card2) .content :is(div,p,span,b){color:var(--ink1)}
+  .card:not(.card2) .content .gold{background:none;-webkit-background-clip:border-box;background-clip:border-box;color:var(--ink1)}
+  .card:not(.card2) .content .ayah .ref{opacity:1}
+  .card:not(.card2) .content .divider{color:var(--ink1);opacity:.8}
+  /* ---------- Below card ---------- */
+  .extras{
+    width:min(100% - 24px,560px);
+    display:flex;flex-direction:column;align-items:center;gap:22px;
+    opacity:0;transition:opacity 1s ease 2.6s;
+  }
+  body.open .extras{opacity:1}
+  .details-out{
+    width:auto;padding:18px 26px;gap:12px;
+    background:rgba(255,250,244,.6);
+    border:1px solid rgba(180,140,80,.3);border-radius:14px;
+    box-shadow:0 10px 24px -16px rgba(110,80,40,.45);
+  }
+  .details-out li{font-size:21px;gap:10px;justify-content:flex-start}
+  .details-out svg{width:20px;height:20px;margin-top:5px}
+  .details-out .sub{font-size:17px}
+  .card2{background:none;aspect-ratio:941/1600;-webkit-mask-image:none;mask-image:none}
+  .card2 .arch{position:absolute;inset:0;width:100%;height:100%}
+  /* ---------- Second part: calendar + countdown ---------- */
+  .card2 .content{top:15%;bottom:20%;left:16%;right:16%;justify-content:space-evenly}
+  .sec-sub{font-size:3.6cqw;color:var(--gold-dark);margin-top:.4cqw}
+  .card2 .month{font-family:"Amiri",serif;font-weight:700;font-size:7cqw;line-height:1.25}
+  .card2 .month.en{font-family:"Great Vibes",cursive;font-weight:400;font-size:11cqw;line-height:1.15;padding:0 2cqw}
+  .card2 .month.en span{font-family:"Cormorant Garamond","Amiri",serif;font-style:italic;font-weight:500;font-size:.55em;letter-spacing:.06em;margin-left:1.5cqw}
+  .sprig{width:52%;height:auto;display:block}
+  .sprig.small{width:40%}
+  .divimg{width:82%;height:auto;display:block}
+  .cal-box{width:100%;direction:rtl}
+  .cal-head,.cal-grid{display:grid;grid-template-columns:repeat(7,1fr)}
+  .cal-head{border-bottom:1px solid rgba(150,110,55,.55);padding-bottom:1.2cqw}
+  .cal-head span{font-size:2.4cqw;font-weight:700;color:var(--gold-dark);white-space:nowrap}
+  .cal-grid{gap:1px;background:rgba(150,110,55,.3);border-bottom:1px solid rgba(150,110,55,.3)}
+  .cal-grid .d{background:#f5e9df;height:6.4cqw;line-height:6.4cqw;font-size:3.7cqw;font-style:italic;color:#7e5806;position:relative}
+  .cal-grid .d.day{font-weight:700;color:#7e5806;font-style:normal;overflow:visible;z-index:1}
+  .cal-grid .d.day svg{
+    position:absolute;left:50%;top:50%;width:9.6cqw;height:8.8cqw;transform:translate(-50%,-48%) rotate(-6deg);
+    overflow:visible;pointer-events:none;
+  }
+  .cal-grid .d.day path{
+    fill:none;stroke:#a67d3c;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;
+    stroke-dasharray:1;stroke-dashoffset:1;
+    transition:stroke-dashoffset 1.8s cubic-bezier(.6,.1,.3,1);
+  }
+  .cal-grid .d.day path.p2{stroke-width:.8;opacity:.55;transition-delay:.35s}
+  .cal-grid .d.day.drawn path{stroke-dashoffset:0}
+  .cd-title{font-family:"Amiri",serif;font-weight:700;font-size:4.4cqw;margin-bottom:1cqw}
+  .countdown{display:flex;justify-content:center;direction:rtl}
+  .unit{padding:0 3cqw;text-align:center;position:relative}
+  .unit + .unit::before{content:"";position:absolute;right:0;top:15%;bottom:15%;width:1px;background:rgba(150,110,55,.45)}
+  .unit b{display:block;font-family:"Amiri",serif;font-weight:700;font-size:6.6cqw;line-height:1.15}
+  .unit span{font-size:3cqw;color:var(--gold)}
+  .gap-top{margin-top:8px}
+  /* ---------- Third part: location ---------- */
+  .card3 .content{top:14.5%;bottom:22.5%;left:13%;right:13%;justify-content:space-evenly;gap:0}
+  .loc-head{width:78%;display:block;margin:0 auto}
+  .card3 .month{margin-top:3cqw;margin-bottom:1cqw}
+  .loc-map{position:relative;display:block;width:80%;text-decoration:none;transition:transform .3s ease}
+  .loc-map:hover{transform:translateY(-2px)}
+  .loc-map img{width:100%;display:block;border-radius:5.4cqw;filter:drop-shadow(0 6px 10px rgba(130,90,40,.18))}
+  .loc-hint{
+    position:absolute;left:50%;bottom:4cqw;transform:translateX(-50%);
+    font-size:3cqw;color:#fffaf2;white-space:nowrap;
+    background:linear-gradient(180deg,#b38a4a,#8f6830);
+    padding:.8cqw 3.4cqw;border-radius:99px;box-shadow:0 4px 10px -5px rgba(110,80,40,.7);
+  }
+  .plate{position:relative;width:100%}
+  .plate img{width:100%;display:block}
+  .plate-text{
+    position:absolute;top:0;bottom:0;left:6%;right:30%;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.4cqw;text-align:center;
+  }
+  .plate-text b{font-size:3.9cqw;color:var(--gold-dark);line-height:1.2}
+  .plate-text span{font-size:2.75cqw;color:var(--ink);line-height:1.25}
+  .card3{aspect-ratio:941/1350}
+  .addr{display:flex;flex-direction:column;align-items:center;text-align:center;gap:.6cqw}
+  .addr svg{width:6cqw;height:6cqw;margin-bottom:.6cqw;filter:drop-shadow(0 .5cqw .6cqw rgba(110,80,40,.25))}
+  .addr b{font-size:4.8cqw;color:var(--gold-dark);line-height:1.25}
+  .addr span{font-size:3.6cqw;color:var(--ink);line-height:1.3}
+  .divimg.small{width:62%}
+  .btn.cal-btn{font-size:3.5cqw;padding:1.3cqw 4.4cqw;gap:1.4cqw;margin-top:3.5cqw;margin-bottom:3cqw}
+  .btn.cal-btn svg{width:3.8cqw;height:3.8cqw}
+  .actions{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:11px 22px;border-radius:999px;
+    font-family:"Amiri",serif;font-size:19px;font-weight:600;text-decoration:none;
+    color:#fffaf2;
+    background:linear-gradient(180deg,#b38a4a,#8f6830);
+    box-shadow:0 8px 18px -10px rgba(110,80,40,.7), inset 0 1px 0 rgba(255,255,255,.35);
+    transition:transform .2s ease, box-shadow .2s ease;
+  }
+  .btn.ghost{background:rgba(255,250,244,.7);color:var(--gold-dark);border:1px solid rgba(160,120,60,.45)}
+  .btn:hover{transform:translateY(-2px)}
+  .btn svg{width:18px;height:18px}
+  .note{font-size:16px;color:var(--gold);opacity:.8;text-align:center}
+
+  /* floating gold motes */
+  .mote{position:fixed;bottom:-10px;width:5px;height:5px;border-radius:50%;
+    background:radial-gradient(circle,#e7cf9c,#c9a463 60%,transparent 70%);
+    opacity:0;pointer-events:none;z-index:0;animation:rise linear infinite}
+  @keyframes rise{0%{transform:translateY(0) translateX(0);opacity:0}10%{opacity:.7}90%{opacity:.5}100%{transform:translateY(-105vh) translateX(30px);opacity:0}}
+
+  @media (prefers-reduced-motion: reduce){
+    *,*::before,*::after{animation:none!important;transition:none!important}
+  }
+</style>
+</head>
+<body>
+
+<div class="intro" id="intro">
+  <div class="env">
+    <div class="layer back feather"></div>
+    <div class="pocket">
+      <div class="mini">
+        <div class="t">عقد قران</div>
+        <div class="n" role="img" aria-label="بشّار و زينب"><img src="name-bashar.png" alt=""><span class="w gold">و</span><img src="name-zainab.png" alt=""></div>
+      </div>
+    </div>
+    <div class="layer front feather"></div>
+    <div class="flap" aria-hidden="true">
+      <div class="face"><div class="inner"></div></div>
+      <div class="face outside"><div class="inner"></div>
+        <button class="seal" id="seal" aria-label="افتح الدعوة"></button>
+      </div>
+    </div>
+  </div>
+  <p>اضغط على الختم لفتح الدعوة</p>
+</div>
+
+<main>
+  <article class="card" aria-label="بطاقة الدعوة">
+    <div class="content">
+
+      <div>
+        <div class="basmala">بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</div>
+        <p class="ayah">﴿ وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا<br>لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً ﴾
+          <span class="ref">سورة الروم – الآية ٢١</span></p>
+      </div>
+
+      <svg class="divider" viewBox="0 0 300 20" fill="none" stroke="currentColor" stroke-width="1"><path d="M10 10H120M180 10H290"/><path d="M150 3c4 4 4 10 0 14c-4-4-4-10 0-14Z" fill="currentColor" fill-opacity=".35"/><path d="M128 10c6-5 12-5 16 0c-4 5-10 5-16 0ZM172 10c-6-5-12-5-16 0c4 5 10 5 16 0Z"/><circle cx="122" cy="10" r="1.6" fill="currentColor"/><circle cx="178" cy="10" r="1.6" fill="currentColor"/></svg>
+
+      <div class="hosts">
+        <div class="lead">يتشرّف كلٌّ من</div>
+        <div class="host-row">
+          <div class="host-col"><span class="title">الحاج</span><span class="host gold">محمد شديد</span></div>
+          <div class="host-col"><span class="title">السيد</span><span class="host gold">محمد بشير الشريف</span></div>
+        </div>
+        <div class="lead">بدعوتكم لمشاركتهم فرحة</div>
+        <div class="occasion gold">عقد قران</div>
+      </div>
+
+      <div class="couple" role="img" aria-label="بشّار و زينب">
+        <img src="name-bashar.png" alt=""><span class="w gold">و</span><img src="name-zainab.png" alt="">
+      </div>
+
+      <svg class="divider" viewBox="0 0 300 20" fill="none" stroke="currentColor" stroke-width="1"><path d="M10 10H120M180 10H290"/><path d="M150 3c4 4 4 10 0 14c-4-4-4-10 0-14Z" fill="currentColor" fill-opacity=".35"/><path d="M128 10c6-5 12-5 16 0c-4 5-10 5-16 0ZM172 10c-6-5-12-5-16 0c4 5 10 5 16 0Z"/><circle cx="122" cy="10" r="1.6" fill="currentColor"/><circle cx="178" cy="10" r="1.6" fill="currentColor"/></svg>
+
+
+      <div class="closing gold">بحضوركم تكتمل فرحتنا</div>
+
+    </div>
+  </article>
+
+  <article class="card card2" aria-label="الموعد">
+    <svg class="arch" viewBox="0 0 941 1600" aria-hidden="true" style="overflow:visible">
+      <defs>
+        <radialGradient id="paperg" cx="50%" cy="45%" r="65%"><stop offset="0" stop-color="#f6eae1"/><stop offset="1" stop-color="#f4e6db"/></radialGradient>
+        <filter id="emb" x="-5%" y="-5%" width="110%" height="110%"><feGaussianBlur stdDeviation="1.2"/></filter>
+      </defs>
+      <path d="M92 1508 V470 A378.5 378.5 0 0 1 849 470 V1508 Z" fill="url(#paperg)"/>
+      <g fill="none" stroke-linejoin="round">
+        <g transform="translate(2 3)" stroke="rgba(160,120,80,.38)" filter="url(#emb)">
+          <path d="M70 1530 V470 A400.5 400.5 0 0 1 871 470 V1530 Z" stroke-width="4"/><path d="M92 1508 V470 A378.5 378.5 0 0 1 849 470 V1508 Z" stroke-width="4"/><path d="M104 1496 V470 A366.5 366.5 0 0 1 837 470 V1496 Z" stroke-width="2"/>
+        </g>
+        <g stroke="#fffaf4">
+          <path d="M70 1530 V470 A400.5 400.5 0 0 1 871 470 V1530 Z" stroke-width="4"/><path d="M92 1508 V470 A378.5 378.5 0 0 1 849 470 V1508 Z" stroke-width="4"/><path d="M104 1496 V470 A366.5 366.5 0 0 1 837 470 V1496 Z" stroke-width="2"/>
+        </g>
+      </g>
+      <image href="peony-l.png" x="44" y="1261" width="272" height="307"/>
+      <image href="peony-r.png" x="625" y="1261" width="272" height="307"/>
+      <image href="orn-top.png" x="360" y="-30" width="220" height="230"/>
+      <image href="orn-bot.png" x="340" y="1365" width="260" height="232"/>
+    </svg>
+    <div class="content">
+      <div>
+        <div class="month en gold" lang="en" dir="ltr">January <span>2027</span></div>
+        <div class="sec-sub">يوم الثلاثاء، بعد صلاة المغرب</div>
+      </div>
+
+      <img class="divimg" src="div-top.png" alt="">
+
+      <div class="cal-box" aria-label="تقويم كانون الثاني ٢٠٢٧، يوم المناسبة الثلاثاء ٥">
+        <div class="cal-head" id="calHead"></div>
+        <div class="cal-grid" id="calGrid"></div>
+      </div>
+
+      <a class="btn ghost cal-btn" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=%D8%B9%D9%82%D8%AF%20%D9%82%D8%B1%D8%A7%D9%86%20%D8%A8%D8%B4%D9%91%D8%A7%D8%B1%20%D9%88%20%D8%B2%D9%8A%D9%86%D8%A8&dates=20270105T140000Z/20270105T170000Z&details=%D8%A8%D8%B9%D8%AF%20%D8%B5%D9%84%D8%A7%D8%A9%20%D8%A7%D9%84%D9%85%D8%BA%D8%B1%D8%A8&location=%D9%85%D9%86%D8%B2%D9%84%20%D8%A7%D9%84%D8%AD%D8%A7%D8%AC%20%D9%85%D8%AD%D9%85%D8%AF%20%D8%B4%D8%AF%D9%8A%D8%AF%D8%8C%20%D8%AF%D9%85%20%D8%A7%D9%84%D9%81%D8%B2%D8%B2%D8%8C%20%D8%A8%D9%86%D8%A7%D9%8A%D8%A9%20%D8%A7%D9%84%D8%AC%D9%88%D8%A7%D9%87%D8%B1%D8%8C%20%D8%A7%D9%84%D8%B7%D8%A7%D8%A8%D9%82%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 9.5h17M8 3v4M16 3v4M12 12.5v5M9.5 15h5"/></svg>
+        أضف إلى التقويم</a>
+
+      <div>
+        <div class="cd-title gold">على موعد الفرح</div>
+        <div class="countdown" id="countdown">
+          <div class="unit"><b class="gold" id="d">٠</b><span>يوم</span></div>
+          <div class="unit"><b class="gold" id="h">٠</b><span>ساعة</span></div>
+          <div class="unit"><b class="gold" id="m">٠</b><span>دقيقة</span></div>
+          <div class="unit"><b class="gold" id="s">٠</b><span>ثانية</span></div>
+        </div>
+      </div>
+
+    </div>
+  </article>
+
+  <article class="card card2 card3" aria-label="الموقع">
+    <svg class="arch" viewBox="0 0 941 1350" aria-hidden="true" style="overflow:visible">
+      <defs>
+        <radialGradient id="paperg3" cx="50%" cy="45%" r="65%"><stop offset="0" stop-color="#f6eae1"/><stop offset="1" stop-color="#f4e6db"/></radialGradient>
+        <filter id="emb3" x="-5%" y="-5%" width="110%" height="110%"><feGaussianBlur stdDeviation="1.2"/></filter>
+      </defs>
+      <path d="M149 92 H792 A82 82 0 0 0 849 149 V1201 A82 82 0 0 0 792 1258 H149 A82 82 0 0 0 92 1201 V149 A82 82 0 0 0 149 92 Z" fill="url(#paperg3)"/>
+      <g fill="none" stroke-linejoin="round">
+        <g transform="translate(2 3)" stroke="rgba(160,120,80,.38)" stroke-width="4" filter="url(#emb3)">
+          <path d="M130 70 H811 A60 60 0 0 0 871 130 V1220 A60 60 0 0 0 811 1280 H130 A60 60 0 0 0 70 1220 V130 A60 60 0 0 0 130 70 Z"/><path d="M149 92 H792 A82 82 0 0 0 849 149 V1201 A82 82 0 0 0 792 1258 H149 A82 82 0 0 0 92 1201 V149 A82 82 0 0 0 149 92 Z"/><path d="M158 104 H783 A94 94 0 0 0 837 158 V1192 A94 94 0 0 0 783 1246 H158 A94 94 0 0 0 104 1192 V158 A94 94 0 0 0 158 104 Z" stroke-width="2"/>
+        </g>
+        <g stroke="#fffaf4" stroke-width="4">
+          <path d="M130 70 H811 A60 60 0 0 0 871 130 V1220 A60 60 0 0 0 811 1280 H130 A60 60 0 0 0 70 1220 V130 A60 60 0 0 0 130 70 Z"/><path d="M149 92 H792 A82 82 0 0 0 849 149 V1201 A82 82 0 0 0 792 1258 H149 A82 82 0 0 0 92 1201 V149 A82 82 0 0 0 149 92 Z"/><path d="M158 104 H783 A94 94 0 0 0 837 158 V1192 A94 94 0 0 0 783 1246 H158 A94 94 0 0 0 104 1192 V158 A94 94 0 0 0 158 104 Z" stroke-width="2"/>
+        </g>
+      </g>
+      <image href="flower-l.png" x="74" y="956" width="290" height="314"/>
+      <image href="flower-r.png" x="577" y="956" width="290" height="314"/>
+      <image href="orn-top.png" x="360" y="-28" width="220" height="230"/>
+      <image href="orn-bot.png" x="340" y="1115" width="260" height="232"/>
+    </svg>
+    <div class="content">
+      <div>
+        <img class="loc-head" src="loc-head.png" alt="">
+        <div class="month gold">المكان</div>
+      </div>
+
+      <div class="addr">
+        <b>منزل الحاج محمد شديد</b>
+        <span>دم الفزز، بناية الجواهر، الطابق الثالث</span>
+      </div>
+
+      <a class="loc-map" href="https://www.google.com/maps/search/?api=1&query=%D8%A8%D9%86%D8%A7%D9%8A%D8%A9%20%D8%A7%D9%84%D8%AC%D9%88%D8%A7%D9%87%D8%B1%20%D8%AF%D9%85%20%D8%A7%D9%84%D9%81%D8%B2%D8%B2" target="_blank" rel="noopener" aria-label="افتح الموقع على خرائط جوجل">
+        <img src="loc-map.png" alt="">
+        <span class="loc-hint">اضغط لفتح الموقع</span>
+      </a>
+    </div>
+  </article>
+
+</main>
+
+<script>
+  const intro = document.getElementById('intro');
+  // gentle auto-scroll down the page after the envelope opens; stops as soon as the guest touches the page
+  function autoScroll(){
+    let stopped = false, last = null, pos = window.scrollY;
+    const speed = 55; // px per second
+    const stop = () => { stopped = true; ['wheel','touchstart','keydown','mousedown'].forEach(ev => window.removeEventListener(ev, stop)); };
+    ['wheel','touchstart','keydown','mousedown'].forEach(ev => window.addEventListener(ev, stop, {passive:true}));
+    function step(t){
+      if (stopped) return;
+      if (last !== null) pos += speed * (t - last) / 1000;
+      last = t;
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      if (pos >= max){ window.scrollTo(0, max); stop(); return; }
+      window.scrollTo(0, pos);
+      requestAnimationFrame(step);
+    }
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    requestAnimationFrame(step);
+  }
+
+  function openInvite(){
+    if (intro.classList.contains('opening')) return;
+    intro.classList.add('opening');
+    setTimeout(()=> intro.classList.add('flap-up'), 800);
+    setTimeout(()=> intro.classList.add('rise'), 1500);
+    setTimeout(()=>{ document.body.classList.add('open'); intro.classList.add('gone'); }, 3600);
+    setTimeout(()=> document.querySelector('.card:not(.card2)').classList.add('shown'), 3600 + 500);
+    setTimeout(autoScroll, 3600 + 6500);
+  }
+  document.getElementById('seal').addEventListener('click', openInvite);
+
+  // Calendar — January 2027, week starts Saturday
+  (function(){
+    const HEART = '<svg viewBox="0 0 40 36" aria-hidden="true">'
+      + '<path pathLength="1" d="M20.6 33.6 C 11 26.4, 2.6 19.6, 3.4 11.2 C 4 4.6, 12 2.2, 16.8 6.6 C 18.4 8.1, 19.4 10, 20 11.8 C 20.9 9.2, 22.6 6.4, 26 4.6 C 31.6 1.8, 38.4 5.4, 36.9 12.6 C 35.4 20.2, 27.4 26.4, 20.1 33.9 C 19.4 34.6, 18.4 33.8, 19.4 32.6"/>'
+      + '<path class="p2" pathLength="1" d="M19.2 31.8 C 10.4 25.2, 4.6 18.8, 5.2 11.8 C 5.8 6.6, 11.8 4.6, 15.8 8.2"/>'
+      + '</svg>';
+    const head = document.getElementById('calHead'), grid = document.getElementById('calGrid');
+    const days = ['سبت','أحد','إثنين','ثلاثاء','أربعاء','خميس','جمعة'];
+    const ar = n => String(n).replace(/\d/g, d => '٠١٢٣٤٥٦٧٨٩'[d]);
+    days.forEach(d => { const e = document.createElement('span'); e.textContent = d; head.appendChild(e); });
+    const offset = (new Date(2027,0,1).getDay() + 1) % 7;
+    const cells = Math.ceil((offset + 31) / 7) * 7;
+    for (let i = 0; i < cells; i++){
+      const d = i - offset + 1, e = document.createElement('div');
+      e.className = 'd' + (d === 5 ? ' day' : '');
+      if (d >= 1 && d <= 31) e.innerHTML = d === 5 ? ar(d) + HEART : ar(d);
+      grid.appendChild(e);
+    }
+    const dayEl = grid.querySelector('.d.day');
+    const draw = () => dayEl && dayEl.classList.add('drawn');
+    if ('IntersectionObserver' in window){
+      const io = new IntersectionObserver(es => es.forEach(en => {
+        if (en.isIntersecting && document.body.classList.contains('open')){ setTimeout(draw, 300); io.disconnect(); }
+      }), {threshold: .6});
+      const start = () => io.observe(dayEl);
+      if (document.body.classList.contains('open')) start();
+      else new MutationObserver((m, mo) => { if (document.body.classList.contains('open')){ mo.disconnect(); setTimeout(start, 1200); } })
+        .observe(document.body, {attributes:true, attributeFilter:['class']});
+    } else draw();
+  })();
+
+  // mark lines for the gradual reveal
+  (function(){
+    const groups = [
+      ['.card:not(.card2)', '.basmala, .ayah, .divider, .hosts > .lead, .host-row, .occasion, .couple, .closing', .38],
+      ['.card2:not(.card3)', '.month, .sec-sub, .divider, .divimg, .cal-box, .cal-btn, .cd-title, .countdown', .22],
+      ['.card3', '.loc-head, .month, .addr b, .addr span, .loc-map', .28]
+    ];
+    groups.forEach(([card, sel, step]) => {
+      const root = document.querySelector(card); if (!root) return;
+      root.querySelectorAll(sel).forEach((el, i) => { el.classList.add('rv'); el.style.transitionDelay = (i * step).toFixed(2) + 's'; });
+    });
+  })();
+
+  // reveal parts 2 & 3 on scroll
+  (function(){
+    const parts = document.querySelectorAll('.card2');
+    if (!('IntersectionObserver' in window)) { parts.forEach(p => p.classList.add('in','shown')); return; }
+    const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting){ e.target.classList.add('in'); setTimeout(()=> e.target.classList.add('shown'), 400); io.unobserve(e.target); } }), {threshold:.15});
+    parts.forEach(p => io.observe(p));
+  })();
+
+  // Countdown — 5 Jan 2027, ~ Maghrib in Amman (UTC+3)
+  const target = new Date('2027-01-05T17:00:00+03:00').getTime();
+  const ar = n => String(n).replace(/\d/g, d => '٠١٢٣٤٥٦٧٨٩'[d]);
+  const el = id => document.getElementById(id);
+  function tick(){
+    let diff = Math.max(0, target - Date.now());
+    const d = Math.floor(diff/864e5); diff -= d*864e5;
+    const h = Math.floor(diff/36e5);  diff -= h*36e5;
+    const m = Math.floor(diff/6e4);   diff -= m*6e4;
+    const s = Math.floor(diff/1e3);
+    el('d').textContent = ar(d); el('h').textContent = ar(h);
+    el('m').textContent = ar(m); el('s').textContent = ar(s);
+  }
+  tick(); setInterval(tick, 1000);
+
+</script>
+</body>
+</html>
