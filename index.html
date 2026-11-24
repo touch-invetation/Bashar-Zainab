@@ -187,10 +187,10 @@
   .hosts{display:flex;flex-direction:column;align-items:center;gap:.4cqw}
   .lead{font-size:4.1cqw;line-height:1.15;color:var(--gold-dark)}
   .host{font-family:"Amiri",serif;font-weight:700;font-size:5.3cqw;line-height:1.3}
-  .host-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:4cqw;width:calc(100% + 12cqw);margin:2.4cqw -6cqw 2.6cqw}
+  .host-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:6cqw;width:calc(100% + 12cqw);margin:2.4cqw -6cqw 2.6cqw}
   .host-col{display:flex;flex-direction:column;align-items:center;justify-content:flex-end}
   .host-col .title{font-size:3.6cqw;color:var(--gold);line-height:1.3}
-  .host-col .host{font-size:4.2cqw;line-height:1.3;white-space:nowrap}
+  .host-col .host{font-size:3.85cqw;line-height:1.3;white-space:nowrap}
   .host-sep{width:1px;background:linear-gradient(transparent,rgba(166,125,60,.55),transparent)}
   .and{font-family:"Amiri",serif;font-weight:700;font-size:3.8cqw;line-height:.8}
   .occasion{font-family:"Amiri",serif;font-weight:700;font-size:4.8cqw;line-height:1.25;margin-top:.8cqw}
@@ -212,23 +212,6 @@
   /* reveal parts 2 & 3 as they scroll into view */
   body.open .card2{opacity:0;transform:translateY(24px);transition:opacity 1s ease, transform 1s cubic-bezier(.2,.8,.2,1)}
   body.open .card2.in{opacity:1;transform:none}
-  /* music toggle */
-  .music{
-    position:fixed;left:16px;bottom:16px;z-index:15;
-    width:46px;height:46px;border-radius:50%;border:1px solid rgba(160,120,60,.45);
-    background:rgba(250,243,235,.85);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);
-    color:#7e5806;display:grid;place-items:center;cursor:pointer;
-    box-shadow:0 6px 16px -8px rgba(110,80,40,.5);
-    opacity:0;transition:opacity .8s ease;
-  }
-  .music[hidden]{display:none}
-  body.open .music{opacity:1}
-  .music svg{width:22px;height:22px;grid-area:1/1}
-  .music .off{display:none}
-  .music.muted .on{display:none}
-  .music.muted .off{display:block}
-  .music:not(.muted) .on{animation:spin 6s linear infinite}
-  @keyframes spin{0%,100%{transform:rotate(-6deg)}50%{transform:rotate(6deg)}}
   /* one dark ink for all text */
   .gold{background:none!important;-webkit-background-clip:border-box!important;background-clip:border-box!important;color:#7e5806!important}
   .btn.ghost{color:#7e5806}
@@ -367,12 +350,6 @@
   <p>اضغط على الختم لفتح الدعوة</p>
 </div>
 
-<audio id="bgm" src="./Kapa Boy - What falling in love feels like x turning page.mp3" loop preload="auto"></audio>
-<button class="music" id="musicBtn" aria-label="إيقاف الموسيقى" hidden>
-  <svg class="on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l11-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="17" cy="16" r="3"/></svg>
-  <svg class="off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l11-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="17" cy="16" r="3"/><path d="M3 3l18 18"/></svg>
-</button>
-
 <main>
   <article class="card" aria-label="بطاقة الدعوة">
     <div class="content">
@@ -388,8 +365,8 @@
       <div class="hosts">
         <div class="lead">يتشرّف كلٌّ من</div>
         <div class="host-row">
-          <div class="host-col"><span class="title">الحاج</span><span class="host gold">محمد شديد</span></div>
           <div class="host-col"><span class="title">السيد</span><span class="host gold">محمد بشير الشريف</span></div>
+          <div class="host-col"><span class="title">الحاج</span><span class="host gold">محمد عبد الفتاح شديد</span></div>
         </div>
         <div class="lead">بدعوتكم لمشاركتهم فرحة</div>
         <div class="occasion gold">عقد قران</div>
@@ -518,29 +495,9 @@
     requestAnimationFrame(step);
   }
 
-  // background music — starts on the seal tap (browsers allow sound only after a tap)
-  const bgm = document.getElementById('bgm'), musicBtn = document.getElementById('musicBtn');
-  let musicOk = true;
-  bgm.addEventListener('error', () => { musicOk = false; musicBtn.hidden = true; });
-  function fadeTo(target, ms){
-    const from = bgm.volume, t0 = performance.now();
-    (function f(t){ const k = Math.min(1,(t-t0)/ms); bgm.volume = from + (target-from)*k; if (k<1) requestAnimationFrame(f); else if (target===0) bgm.pause(); })(t0);
-  }
-  function startMusic(){
-    if (!musicOk) return;
-    bgm.volume = 0;
-    const p = bgm.play();
-    if (p && p.then) p.then(() => { musicBtn.hidden = false; fadeTo(.6, 2500); }).catch(() => { musicBtn.hidden = false; musicBtn.classList.add('muted'); });
-  }
-  musicBtn.addEventListener('click', () => {
-    if (bgm.paused){ bgm.play().then(()=>{ fadeTo(.6, 800); musicBtn.classList.remove('muted'); musicBtn.setAttribute('aria-label','إيقاف الموسيقى'); }).catch(()=>{}); }
-    else { fadeTo(0, 500); musicBtn.classList.add('muted'); musicBtn.setAttribute('aria-label','تشغيل الموسيقى'); }
-  });
-
   function openInvite(){
     if (intro.classList.contains('opening')) return;
     intro.classList.add('opening');
-    startMusic();
     setTimeout(()=> intro.classList.add('flap-up'), 800);
     setTimeout(()=> intro.classList.add('rise'), 1500);
     setTimeout(()=>{ document.body.classList.add('open'); intro.classList.add('gone'); }, 3600);
